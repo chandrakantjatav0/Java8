@@ -16,7 +16,6 @@ public class DistinctNumbers {
         List<Integer> numbers = List.of(1, 2, 3, 4, 3, 2, 5, 6, 1, 7, 8, 9, 7, 10);
         List<Integer> distinctNumbers = numbers.stream()
                 .collect(Collectors.toCollection(LinkedHashSet::new))
-                .stream()
                 .collect(Collectors.toList());
 
         System.out.println("Original List: " + numbers);
